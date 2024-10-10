@@ -44,18 +44,22 @@
             padding: 10px;
             width: 500px;
             border: 1px solid #ccc;
-            border-radius: 2px 0 0 2px; 
             outline: none;
+            border-radius: 0 2px 2px 0; 
+            font-weight: bold;
+            border-color:#000000;
+            box-shadow: inset 1px 2px 5px;
         }
 
         .search-btn {
-            background-color: #ff0000;
-            border: none;
+            background-color: #ffffff;
             padding: 10px 20px;
             cursor: pointer;
-            border-radius: 0 2px 2px 0; 
-            color: white;
+            color: rgb(0, 0, 0);
             font-weight: bold;
+            border-style: solid;
+            border-color:#000000;
+            box-shadow: inset 1px 2px 5px;
         }
 
         .header-right {
@@ -117,6 +121,7 @@
 
             .header-center input {
                 width: 300px;
+                
             }
         }
 
@@ -140,12 +145,7 @@
             }
         }
 
-        footer {
-            padding: 20px;
-            text-align: center;
-            background-color: #3c3c3c;
-            color: #f0f0f0;
-        }
+        
     </style>
 </head>
 <body>
@@ -156,7 +156,9 @@
 
         <div class="header-center">
             <input type="text" placeholder="Hľadať...">
-            <button class="search-btn">Search</button>
+            <button class="search-btn"> 
+                <img src="icons/search.svg" alt="">
+            </button>
         </div>
 
         <div class="header-right">
