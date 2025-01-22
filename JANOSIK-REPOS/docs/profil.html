@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .card-container {
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 250px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-front {
+            background-color: #e3f2fd;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-back {
+            background-color: #4a90e2;
+            color: white;
+            transform: rotateY(180deg);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-front h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .card-front p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .message-button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .message-button:hover {
+            background-color: #358ab8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card">
+        <div class="card-face card-front">
+            <div class="profile-pic">
+                <img src="./juraj-slafkovsky.jpg" alt="Profile Picture">
+            </div>
+            <h2>Juraj Slafkovský</h2>
+            <p>Montreal Canadiens</p>
+            <div class="social-icons">
+                <img src="./instagram-icon-png--removebg-preview.png" alt="Instagram">
+                <img src="./2021_Facebook_icon-removebg-preview.png" alt="Facebook">
+                <img src="./Gmail_icon__2020_-removebg-preview.png" alt="Email">
+            </div>
+            <button class="message-button">Správa</button>
+        </div>
+        <div class="card-face card-back">
+            <p>Juraj Slafkovský je slovenský profesionálny hokejista, narodený 30. marca 2004 v Košiciach. Hrá na pozícii ľavého krídelníka a je známy svojou robustnou postavou, technickými schopnosťami a hokejovou inteligenciou.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
